@@ -4,6 +4,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 CSRF_ENABLED = True
 SECRET_KEY = 'you-will-never-guess'
 
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 OAUTH_CREDENTIALS = { #tutorial has app.config['OAUTH_CRED...']' but that's unnecessary
     'facebook': {
         'id': '1837196166539923',
