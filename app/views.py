@@ -28,6 +28,7 @@ def before_request():
 		db.session.add(g.user)
 		db.session.commit()
 		g.search_form = SearchForm()
+	g.locale = get_locale()
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -121,11 +122,11 @@ def follow(nickname):
 		return redirect(url_for('user', nickname=nickname))
 	u = g.user.follow(user)
 	if u is None:
-		flash(gettext('Cannot follow', nickname + '.'))
+		flash(gettext('Cannot follow'), nickname + '.')
 		return redirect(url_for('user', nickname=nickname))
 	db.session.add(u)
 	db.session.commit()
-	flash(gettext('You are now following', nickname + '!'))
+	flash(gettext('You are now following'), nickname + '!')
 	follower_notification(user, g.user)
 	return redirect(url_for('user', nickname=nickname))
 
@@ -141,11 +142,11 @@ def unfollow(nickname):
 		return redirect(url_for('user', nickname=nickname))
 	u = g.user.unfollow(user)
 	if u is None:
-		flash(gettext('Cannot unfollow', nickname + '.'))
+		flash(gettext('Cannot unfollow'), nickname + '.')
 		return redirect(url_for('user', nickname=nickname))
 	db.session.add(u)
 	db.session.commit()
-	flash(gettext('You have stopped following', nickname + '.'))
+	flash(gettext('You have stopped following'), nickname + '.')
 	return redirect(url_for('user', nickname=nickname))
 
 @app.route('/delete/<int:id>')

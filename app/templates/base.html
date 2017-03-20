@@ -5,6 +5,9 @@
     {% else %}
     <title>Welcome to microblog</title>
     {% endif %}
+    {% if g.locale != 'en' %}
+        <script src="/static/js/moment-{{ g.locale }}.min.js"</script>
+    {% endif %}
     <script src="/static/js/moment.min.js"></script>
   </head>
   <body>
