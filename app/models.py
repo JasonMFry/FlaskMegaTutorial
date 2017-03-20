@@ -1,5 +1,6 @@
 from app import db, lm, app
 from hashlib import md5
+import re
 
 import sys
 if sys.version_info >= (3, 0):
@@ -32,6 +33,10 @@ class User(db.Model):
 		if self.email:
 			return 'http://www.gravatar.com/avatar/%s?d=mm&s=%d' % (md5(self.email.encode('utf-8')).hexdigest(), size)
 			return 'http://www.gravatar.com/avatar/%s?d=mm&s=%d' % ('', size)
+
+	@staticmethod
+	def make_valid_nickname(nickname):
+		return re.sub('[^a-zA-z0-9_\.]', '', nickname)
 
 	@staticmethod
 	def make_unique_nickname(nickname):
