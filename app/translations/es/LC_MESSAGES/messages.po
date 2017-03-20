@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-20 11:36-0400\n"
-"PO-Revision-Date: 2017-03-20 11:37-0400\n"
+"POT-Creation-Date: 2017-03-20 12:13-0400\n"
+"PO-Revision-Date: 2017-03-20 12:14-0400\n"
 "Last-Translator: \n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
@@ -18,6 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 "X-Generator: Poedit 1.8.12\n"
+
+#: app/__init__.py:16
+msgid "Please log in to access this page."
+msgstr "Por favor, identifícate para acceder a la página."
 
 #: app/forms.py:25
 msgid ""
@@ -31,68 +35,68 @@ msgstr ""
 msgid "This nickname is already in use.  Please choose one that sucks less."
 msgstr "Este apodo está ya en uso.  Por favor elija uno que succiona menos."
 
-#: app/views.py:43
+#: app/views.py:44
 msgid "Your post is now live!"
 msgstr "Tu publicación ya está en vivo!"
 
-#: app/views.py:70
+#: app/views.py:71
 msgid "Authentication failed."
 msgstr "Error de autenticación."
 
-#: app/views.py:91 app/views.py:117 app/views.py:137
+#: app/views.py:92 app/views.py:118 app/views.py:138
 #, python-format
 msgid "User %s not found."
 msgstr ""
 
-#: app/views.py:105
+#: app/views.py:106
 msgid "Your changes have been saved."
 msgstr "Se han guardado los cambios."
 
-#: app/views.py:120
+#: app/views.py:121
 msgid "You can't follow yourself!"
 msgstr "¡Usted no puede seguir usted mismo!"
 
-#: app/views.py:124
+#: app/views.py:125
 msgid "Cannot follow"
 msgstr "No puede seguir"
 
-#: app/views.py:128
+#: app/views.py:129
 msgid "You are now following"
 msgstr "Ahora estás siguiendo"
 
-#: app/views.py:140
+#: app/views.py:141
 msgid "You can't unfollow yourself!"
 msgstr "¡Usted no puede dejar de seguir a sí mismo!"
 
-#: app/views.py:144
+#: app/views.py:145
 msgid "Cannot unfollow"
 msgstr ""
 
-#: app/views.py:148
+#: app/views.py:149
 msgid "You have stopped following"
 msgstr "Ahora estás siguiendo"
 
-#: app/views.py:156
+#: app/views.py:157
 msgid "Post not found."
 msgstr "Tu publicación ya está en vivo!"
 
-#: app/views.py:159
+#: app/views.py:160
 msgid "You cannot delete this post."
 msgstr ""
 
-#: app/views.py:163
+#: app/views.py:164
 msgid "Your post has been deleted."
 msgstr ""
 
-#: app/templates/base.html:12
+#: app/templates/base.html:15
 msgid "Home"
 msgstr "Casa"
 
-#: app/templates/base.html:14
+#: app/templates/base.html:17
 msgid "Your Profile"
 msgstr "Tu perfil"
 
-#: app/templates/base.html:16
+#: app/templates/base.html:19
 msgid "Logout"
 msgstr "Cerrar sesión"
 
