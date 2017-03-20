@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 from flask_mail import Mail
 from .momentjs import momentjs
+from flask_babel import Babel
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -14,6 +15,7 @@ lm.init_app(app)
 lm.login_view = 'login'
 mail = Mail(app)
 app.jinja_env.globals['momentjs'] = momentjs
+babel = Babel(app)
 
 if not app.debug:
 	import logging

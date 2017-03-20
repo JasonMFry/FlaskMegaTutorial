@@ -1,3 +1,4 @@
+#  -*- coding: utf-8 -*-
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -7,14 +8,14 @@ SECRET_KEY = 'you-will-never-guess'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 OAUTH_CREDENTIALS = { #tutorial has app.config['OAUTH_CRED...']' but that's unnecessary
-    'facebook': {
-        'id': '1837196166539923',
-        'secret': 'b686b5a304e204587536042acc1fc566'
-     },
-    'twitter': {
-        'id': '5AX8vQD41aF7btSPLJkIiuJKd',
-        'secret': 'aQNQRQsPfRD3Fpz0pSgwiwyftlOZWp22b5alipQzeCakxXLM3t'
-    }
+	'facebook': {
+		'id': '1837196166539923',
+		'secret': 'b686b5a304e204587536042acc1fc566'
+	 },
+	'twitter': {
+		'id': '5AX8vQD41aF7btSPLJkIiuJKd',
+		'secret': 'aQNQRQsPfRD3Fpz0pSgwiwyftlOZWp22b5alipQzeCakxXLM3t'
+	}
 }
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
@@ -37,3 +38,9 @@ POSTS_PER_PAGE = 3
 # text search
 WHOOSH_BASE = os.path.join(basedir, 'search.db')
 MAX_SEARCH_RESULTS = 50
+
+# available languages
+LANGUAGES = {
+	'en': 'English',
+	'es': 'Español'
+}
